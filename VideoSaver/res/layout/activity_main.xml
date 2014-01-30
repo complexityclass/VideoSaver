@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?><RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_above="@+id/btnStartRecord"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/editText1" >
+
+    </SurfaceView>
+
+    <Button
+        android:id="@+id/btnStartRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnStopRecord"
+        android:layout_alignBottom="@+id/btnStopRecord"
+        android:layout_alignLeft="@+id/surfaceView"
+        android:onClick="onClickStartRecord"
+        android:text="@string/start_record" />
+
+    <Button
+        android:id="@+id/btnStopRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_toRightOf="@+id/btnStartRecord"
+        android:onClick="onClickStopRecord"
+        android:text="@string/stop_record" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnStopRecord"
+        android:layout_alignTop="@+id/btnStartRecord"
+        android:layout_toRightOf="@+id/btnStopRecord" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/surfaceView"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/surfaceView"
+        android:layout_marginTop="54dp"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+</RelativeLayout>
